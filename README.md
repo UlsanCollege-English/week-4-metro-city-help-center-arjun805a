@@ -1,41 +1,32 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KuuIFSwK)
-# Weekly Coding #3 — Metro City Help Center
+# Week 3: Metro City Help Center
 
 ## Summary
-This homework uses one connected story to practice stack and queue behavior in Python.
-
-Metro City Help Center needs a small support system for recent staff actions, waiting citizens, request-note checks, and service-line processing.
-
-## How to run
-```bash
-pytest -q
-```
+This assignment focuses on stacks and queues in a help center system. I implemented stack operations for tracking actions, queue operations for serving citizens, and functions for checking balanced brackets and processing requests.
 
 ## Complexity
-### `ActionStack.pop`
-- Time:
-- Why:
 
-### `RequestQueue.dequeue`
-- Time:
-- Why:
+- ActionStack.pop → O(1)  
+  Removing from end of list is constant time  
 
-### `is_note_balanced`
-- Time:
-- Why:
+- RequestQueue.dequeue → O(1)  
+  deque allows fast removal from front  
 
-### `process_request_line`
-- Time:
-- Why:
+- is_note_balanced → O(n)  
+  We check each character once  
 
-## Edge-case checklist
-- [ ] empty action stack
-- [ ] empty request queue
-- [ ] empty string for `is_note_balanced`
-- [ ] note with no brackets
-- [ ] empty citizen list
+- process_request_line → O(n)  
+  Each citizen is processed once  
 
-## Assistance & sources
-- AI used? (Y/N):
-- What it helped with:
-- Other sources:
+## Edge Cases
+
+- Empty stack → pop and peek return None  
+- Empty queue → dequeue and peek return None  
+- Empty string → True  
+- No brackets → True  
+- Empty citizen list → []  
+
+## Assistance
+
+- AI used: Yes  
+- Help: logic, debugging, explanation  
+- Sources: class notes, slides  
